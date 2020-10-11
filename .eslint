@@ -1,0 +1,403 @@
+
+/**
+ * Configuration file for the ESLint utility (https://eslint.org)
+ */
+
+module.exports = {
+  // Environment is specified as node and also supports ES6.
+  env: {
+    es6: true, // This sets the ecmaVersion to 6 by default
+    node: true,
+    jasmine: true
+  },
+
+  // Enable rules that report common problems.
+  extends: [
+    'eslint:recommended',
+    'plugin:node/recommended'
+  ],
+
+  rules: {
+
+    // Enforce consistent spacing inside array brackets
+    'array-bracket-spacing': [
+      'error',
+      'never',
+      {}
+    ],
+
+    // Enforce consistent brace style for blocks
+    // if (foo) {
+    //  bar();
+    // }
+    // else {
+    //  baz();
+    // }
+    'brace-style': [
+      'error',
+      'stroustrup'
+    ],
+
+    // require return statements after callbacks
+    'callback-return': 'error',
+
+    // Enforce camelcase naming convention
+    "camelcase": 'error',
+
+    // Enforce consistent comma style
+    'comma-style': [
+      'error',
+      'last'
+    ],
+
+    // Enforce consistent naming when capturing the current execution context
+    'consistent-this': [
+      'error',
+      'self'
+    ],
+
+    // Enforce consistent brace style for all control statements.
+    curly: 'error',
+
+    // Enforce dot notation whenever possible.
+    'dot-notation': 'error',
+
+    // Require newline at the end of files
+    'eol-last': 'error',
+
+    // Require the use of === and !==
+    eqeqeq: 'error',
+
+    // Require require() calls to be placed at top-level module scope
+    'global-require': 'error',
+
+    // Require for-in loops to include an if statement
+    'guard-for-in': 'error',
+
+    // Require error handling in callbacks
+    'handle-callback-err': 'error',
+
+    // Use 2 spaces for indent.
+    indent: [
+      'error',
+      2
+    ],
+
+    // Enforce consistent spacing between keys and values in object literal properties
+    'key-spacing': [
+      'error',
+      {
+        'beforeColon': false,
+        'afterColon': true
+      }
+    ],
+
+    // Enforce consistent spacing before and after keywords
+    'keyword-spacing': 'error',
+
+    // Use unix style line endings.
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+
+    'max-len': [
+      'error',
+      {
+        'code': 120
+      }
+    ],
+
+    // Require constructor names to begin with a capital letter
+    'new-cap': 'error',
+
+    // Allow the unpublished requires.
+    "node/no-unpublished-require": 0,
+
+    // Disallow unsupported features
+    "node/no-unsupported-features": ["error", {
+      "version": "8.11.3",
+      "ignores": []
+    }],
+
+    // Disallow unsupported features
+    "node/no-unsupported-features/es-syntax": ["error", {
+      "version": "8.11.3",
+      "ignores": []
+    }],
+
+    // Allow missing requires. The dependent modules will be taken care during gulp build
+    "node/no-missing-require": 0,
+
+    // Disallow the bitwise operator
+    'no-bitwise': 'error',
+
+    // Disallow use of the Buffer() constructor
+    'no-buffer-constructor': 'error',
+
+    // Disallow the use of arguments.caller or arguments.callee
+    'no-caller': 'error',
+
+    // Disallow extending native types
+    'no-extend-native': 'error',
+
+    // Disallow shorthand type conversions.
+    'no-implicit-coercion': 'error',
+
+    // Disallow variable and function declarations in the global scope.
+    'no-implicit-globals': 'error',
+
+    // Disallow function declarations and expressions inside loop statements.
+    'no-loop-func': 'error',
+
+    // Disallow require calls to be mixed with regular variable declarations
+    'no-mixed-requires': 'error',
+
+    // Disallow multi-line strings
+    'no-multi-str': 'error',
+
+    // Disallow multiple empty lines
+    'no-multiple-empty-lines': 'error',
+
+    // Disallow new operators with calls to require
+    'no-new-require': 'error',
+
+    // Disallow string concatenation with __dirname and __filename
+    'no-path-concat': 'error',
+
+    // Disallow the use of process.env
+    'no-process-env': 'error',
+
+    // Disallow the use of process.exit()
+    'no-process-exit': 'error',
+
+    // Disallow specified modules when loaded by require
+    'no-restricted-modules': 'error',
+
+    // Disallow comma operators
+    'no-sequences': 'error',
+
+    // Disallow synchronous methods
+    'no-sync': 'error',
+
+    // Disallow trailing whitespace at the end of lines
+    'no-trailing-spaces': 'error',
+
+    // Disallow the use of variables before they are defined
+    "no-use-before-define": 'error',
+
+    // Require let or const instead of var
+    'no-var': 'error',
+
+    // Disallow with statements
+    'no-with': 'error',
+
+    // Enforce consistent linebreak style for operators
+    'operator-linebreak': [
+      'error',
+      'after'
+    ],
+
+    // Require quotes around object literal property names
+    'quote-props': [
+      'error',
+      'as-needed'
+    ],
+
+    // Use single quotes around string constants.
+    quotes: [
+      'error',
+      'single'
+    ],
+
+    // Terminate every statement with a semicolon.
+    semi: [
+      'error',
+      'always'
+    ],
+
+    // Enforce consistent spacing inside parentheses
+    'space-in-parens': [
+      'error'
+    ],
+
+    // Require spacing around infix operators
+    'space-infix-ops': 'error',
+
+    // Enforce consistent spacing before or after unary operators
+    'space-unary-ops': 'error',
+
+    // Requires strict mode directives
+    'strict': 'error',
+
+    // Require parentheses around immediate function invocations.
+    'wrap-iife': 'error',
+
+
+    // If an object property has a setter, also require a getter.
+    'accessor-pairs': 'error',
+
+    // Require space directly inside opening/closing braces in single-line blocks.
+    //   { return true; }  not  {return true;}
+    'block-spacing': 'error',
+
+    // Disallow spaces before commas, and require spaces after commas.
+    //   (foo, bar, baz)  not  (foo ,bar,baz)
+    'comma-spacing': 'error',
+
+    // Disallow spaces inside computed property brackets
+    //   obj[foo]  not  obj[ foo ]
+    'computed-property-spacing': ['error', 'never'],
+
+    // Require files to end with a newline.
+    'eol-last': 'warn',
+
+    // Require an empty line before a block comment.
+    'lines-around-comment': 'error',
+
+    'max-len': [
+      'warn',
+      {
+        'code': 120
+      }
+    ],
+
+    // Require constructor names to begin with a capital letter
+    'new-cap': 'warn',
+
+    // Require parentheses when invoking a constructor with no arguments.
+    'new-parens': 'error',
+
+    // Requires a newline after each call in a method chain or deep member
+    // access whose length exceeds 2, e.g.:
+    //   obj
+    //     .prop
+    //     .method()
+    'newline-per-chained-call': 'error',
+
+
+    // Disallow use of Array constructor unless creating a sparse array of a given size.
+    'no-array-constructor': 'error',
+
+    // Disallow arrow functions where they could be confused with comparisons.
+    'no-confusing-arrow': ['error', {
+      'allowParens': true
+    }],
+
+    // Require a single import statement per module.
+    'no-duplicate-imports': 'error',
+
+    // Disallow use of the "eval" function.
+    'no-eval': 'error',
+
+    // Disallow an if statement as the only statement in an else block.
+    'no-lonely-if': 'error',
+
+    // Disallow nested ternary expressions, such as:
+    //   let foo = bar ? baz : qux === quxx ? bing : bam;
+    'no-nested-ternary': 'error',
+
+    // Disallow invoking "new" without assigning the result to anything.
+    'no-new': 'error',
+
+    // Disallow the use of the "new" operator with the Function constructor.
+    'no-new-func': 'error',
+
+    // Disallow the use of the "new" operator with the Object constructor.
+    'no-new-object': 'error',
+
+    // Disallow the use of the "new" operator with the Boolean, Number, or String constructor.
+    'no-new-wrappers': 'error',
+
+    // Disallow the use of the "__proto__" property of an object.
+    'no-proto': 'error',
+
+    // Don't allow a assignment to be performed inside a return statement, e.g.,
+    //   return foo = bar + 2;
+    'no-return-assign': 'error',
+
+    // Don't allow a variable to be compared against itself, e.g.
+    //   let foo = bar === bar;
+    'no-self-compare': 'error',
+
+    // Disallow shadowing of restricted names, e.g.:
+    //   let undefined = 'foo';
+    'no-shadow-restricted-names': 'error',
+
+    // Disallow trailing whitespace at the end of lines
+    'no-trailing-spaces': 'warn',
+
+    // Don't allow throwing of literals.
+    //   throw new Error();  not  throw "Error!";
+    'no-throw-literal': 'error',
+
+    // Disallow initializing variables to undefined.
+    //   let foo;  not  let foo = undefined;
+    'no-undef-init': 'error',
+
+    // Disallow empty constructors.
+    'no-useless-constructor': 'error',
+
+    // Disallow whitespace around the dot or before the opening bracket before properties of objects.
+    //   foo.bar  not  foo .bar
+    'no-whitespace-before-property': 'error',
+
+    // Disallow spaces directly inside of object-literal braces.
+    //   {foo: 'bar'}  not  { foo: 'bar' }
+    'object-curly-spacing': 'error',
+
+    // Require the ES6 shorthand form for defining object literal methods and properties.
+    //   let foo = {a() {}};  not  let foo = {a: function() {}};
+    'object-shorthand': 'error',
+
+    // Require quotes around object literal property names
+    'quote-props': [
+      'warn',
+      'as-needed'
+    ],
+
+    // Use single quotes around string constants.
+    quotes: [
+      'warn',
+      'single'
+    ],
+
+    // Require "const" to be used for declaring variables that are never reassigned.
+    'prefer-const': 'error',
+
+    // Require single quotes for string literals unless the value contains a single quote.
+    quotes: ['error', 'single', 'avoid-escape'],
+
+    // Require the radix to be specified when calling parseInt.
+    radix: 'error',
+
+    // Require imports to be sorted (https://eslint.org/docs/rules/sort-imports)
+    'sort-imports': 'error',
+
+    // Require variables in the same block to be declared alphabetically.
+    'sort-vars': 'error',
+
+    // Require space before braces that open blocks.
+    //   if (a) {  not  if (a){
+    'space-before-blocks': 'error',
+
+    // When declaring a function, require a space after the function name.
+    //   function foo ()  not  function foo()
+    'space-before-function-paren': 'error',
+
+    // Require space immediately after the initial // or /* of a comment.
+    'spaced-comment': 'error',
+
+    // Disallow spaces directly inside of braces in expressions in template strings.
+    //   `Hi ${name}`  not  `Hi ${ name }`
+    'template-curly-spacing': 'error',
+
+    // Require no space before and space after the "*" in a yield expression.
+    //    yield* x;  not  yield *x;
+    'yield-star-spacing': 'error',
+
+    // Don't allow comparisons to be "Yoda conditions".
+    //   if (color === "red")  not  if ("red" === color)
+    yoda: 'error'
+  }
+};
