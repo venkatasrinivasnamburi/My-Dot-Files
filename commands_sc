@@ -1,0 +1,87 @@
+# General alias commands
+alias fj='%!jq "."'
+alias ls='ls -AFhl'
+alias la='ls -aFhl'
+alias cb='pbcopy'
+alias pls='sudo'
+alias eb='vi ~/.bashrc'
+alias ni='npm install'
+alias ev='vi ~/.vimrc'
+alias en='vi ~/.npmrc'
+alias op='open .'
+alias showFiles='defaults write com.apple.Finder AppleShowAllFiles true'
+alias hideFiles='defaults write com.apple.Finder AppleShowAllFiles false'
+alias rm='rm -v'
+alias mz="echo 'https://oracle.zoom.us/my/venkata.srinivas.namburi?pwd=VlExMndxb3lQMTQzaFpHT1pqU2o3UT09' | pbcopy "
+mcd (){
+mkdir $1
+cd  $1
+}
+
+#commerce related commands
+alias cleanCommerce='renv && gradlew cleanIdea && git clean -xfd && gradlew build'
+alias cof='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus//atg/commerce/order/returns/CloudOrderFulfillerService_production/"'
+alias aapi='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/api/index.html?startCatalog=ccadmin"'
+alias accd='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/ccdebug/"'
+alias pp='yarn eslint:fix && yarn lint && yarn test'
+alias cra='create-react-app'
+alias cush='ps -p $$'
+alias g='gulp'
+alias inss='gradlew installOotbSse -PbuildSse=true'
+alias installSse='source env.sh && cd ~/work/source_code/cloud_commerce_code/cloud-commerce/commerce/Dynamo/Client/Admin && gradlew installOotbSse -PbuildSse=true'
+alias oa='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/occs-admin"'
+alias os='open -a "Firefox" "http://blr00ask.in.oracle.com:8080/"'
+alias ra='source env.sh && cd commerce && gradlew qa-t-o-a'
+alias raa='source env.sh && cd commerce && gradlew qa-t-o-a -Pam=QA.AlphaFeatures'
+alias rca='source env.sh && cd commerce && gradlew clean qa-t-o-a'
+alias rcabs='source env.sh && cd commerce && gradlew clean qa-t-o-a -PbuildSse=true'
+alias rd='docker run --rm -p 1521:1521 -p5500:5500 -p5580:8080 --name oracle11 --hostname oracledb --privileged cc-registry.us.oracle.com:5000/oracle/oracle-11g:11.2.0.4'
+alias rda='source env.sh && cd commerce && gradlew d-o qa-t-o-a'
+alias renv='source env.sh'
+alias rp='export http_proxy="" &&  export https_proxy=""'
+alias rs='source env.sh && cd commerce && gradlew qa-t-o'
+alias rsse='npm run debug-custom'
+alias sapi='open http://blr00ask.in.oracle.com:8080/api/index.html'
+alias sb='source ~/.bashrc'
+alias sccd='open http://blr00ask.in.oracle.com:8080/ccdebug/'
+alias ssha='ssh-add ~/.ssh/id_rsa'
+alias sshv='ssh blr00ask'
+# OSF commands
+alias stawm='wm && ./stop.sh && ./start.sh'
+alias stowm='wm && ./stop.sh'
+alias subItemsData='gradlew --info -Dtest.single=StoreAssignShippingGrpsToSubItems :WAPITests:WAPITests.WAPITelco:test'
+alias tcr='yarn test:api --testPathPattern=calculate-refund.spec.js --no-coverage --bail'
+alias tgrr='yarn test:api --testPathPattern=get-return-request.spec.js --no-coverage --bail'
+alias tcrr='yarn test:api --testPathPattern=create-return-request.spec.js --no-coverage --bail'
+alias tvr='yarn test:api --testPathPattern=validate-returns.spec.js --no-coverage --bail'
+alias tir='yarn test:api --testPathPattern=initiate-return.spec.js --no-coverage --bail'
+alias tpc='yarn test:api --testPathPattern=price-cart.spec.js --no-coverage --bail'
+alias tca='tcr && tgrr && tcrr && tvr && tir'
+alias wm='osf && cd qa/wiremock'
+alias wmp='sudo lsof -i :5555'
+alias dev='cd ~/dev'
+alias store_logs='cd /scratch/workspace/cloud_commerce_code/cloud-commerce/localData/tomcat/atgbases/ccStore/logs && tail -f catalina.2020-08-07.log -n 10000'
+alias admin_logs='cd /scratch/workspace/cloud_commerce_code/cloud-commerce/localData/tomcat/atgbases/ccAdmin/logs && tail -f catalina.2020-08-07.log -n 10000'
+#bulk related commands
+alias bulk='cd /Users/venambur/personal/work/integrations/Bulk'
+alias ps='open -a "Google Chrome" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/" ' 
+alias psl='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/?shouldInvokeMethod=load" '
+alias pslp='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry_production/?shouldInvokeMethod=load" '
+alias psd='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/?propertyName=definitionFile" '
+# calibre commands
+alias db='python3 safaribooks.py'
+alias nrpi='npm run products_import'
+alias nrpe='npm run products_export'
+alias nrcai='npm run catalogs_import'
+alias nrcae='npm run catalogs_export'
+alias nrcoi='npm run collections_import'
+alias nrcoe='npm run collections_export'
+
+# postgresql commands
+alias spgs='pg_ctl -D /usr/local/var/postgres start'
+
+# bulk commands
+alias rmbf='find . -type d -name "*_[0-9]*" -exec rm -rf {} +'
+
+#React specific commands
+sjs='json-server --watch db.json --port 3004' # command to start json server.
