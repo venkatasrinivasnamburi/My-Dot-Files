@@ -45,7 +45,8 @@ alias sapi='open http://blr00ask.in.oracle.com:8080/api/index.html'
 alias sb='source ~/.bashrc'
 alias sccd='open http://blr00ask.in.oracle.com:8080/ccdebug/'
 alias ssha='ssh-add ~/.ssh/id_rsa'
-alias sshv='ssh blr00ask'
+alias sshvo='ssh kkm00abl.in.oracle.com'
+alias sshv='ssh phoenix47693.ad2.fusionappsdphx1.oraclevcn.com'
 # OSF commands
 alias stawm='wm && ./stop.sh && ./start.sh'
 alias stowm='wm && ./stop.sh'
@@ -63,13 +64,16 @@ alias dev='cd ~/dev'
 alias store_logs='cd /scratch/workspace/cloud_commerce_code/cloud-commerce/localData/tomcat/atgbases/ccStore/logs && tail -f catalina.2020-08-07.log -n 10000'
 alias admin_logs='cd /scratch/workspace/cloud_commerce_code/cloud-commerce/localData/tomcat/atgbases/ccAdmin/logs && tail -f catalina.2020-08-07.log -n 10000'
 #bulk related commands
-alias bulk='cd /Users/venambur/personal/work/integrations/Bulk'
 alias ps='open -a "Google Chrome" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/" ' 
 alias psl='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/?shouldInvokeMethod=load" '
 alias pslp='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry_production/?shouldInvokeMethod=load" '
 alias psd='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/cloud/payloadschema/CloudPayloadSchemaRegistry/?propertyName=definitionFile" '
+alias pcr='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/commerce/catalog/ProductCatalog/?action=seetmpl&itemdesc=category#showProperties" '
+alias pcrp='open -a "Firefox" "http://blr00ask.in.oracle.com:9080/dyn/admin/nucleus/atg/commerce/catalog/ProductCatalog_production/?action=seetmpl&itemdesc=category#showProperties" '
+
 # calibre commands
 alias db='python3 safaribooks.py'
+# bulk commands.
 alias nrpi='npm run products_import'
 alias nrpe='npm run products_export'
 alias nrcai='npm run catalogs_import'
@@ -77,6 +81,9 @@ alias nrcae='npm run catalogs_export'
 alias nrcoi='npm run collections_import'
 alias nrcoe='npm run collections_export'
 
+# npm commands
+alias  nrs='npm run start'
+alias  nrd='npm run dev'
 # postgresql commands
 alias spgs='pg_ctl -D /usr/local/var/postgres start'
 
@@ -84,4 +91,12 @@ alias spgs='pg_ctl -D /usr/local/var/postgres start'
 alias rmbf='find . -type d -name "*_[0-9]*" -exec rm -rf {} +'
 
 #React specific commands
-sjs='json-server --watch db.json --port 3004' # command to start json server.
+alias sjs='json-server --watch db.json --port 3004' # command to start json server.
+alias ns='npm start'
+
+#INtellij sepcific commands
+alias intellij='clco && renv && idea'
+alias up='unset https_proxy && unset http_proxy'
+
+#Java related commands
+alias jv='/usr/libexec/java_home -V'
